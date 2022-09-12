@@ -138,4 +138,41 @@ func main() {
 		fmt.Println("Invalid plan")
 	}
 	fmt.Println()
+
+	fmt.Printf("\nfor\n")
+	fmt.Println("v1.0")
+	for n := 0; n <= 5; n++ {
+		fmt.Println(n)
+	}
+
+	fmt.Println("v2.0 (while)")
+	num := 1
+	for num < 100 {
+		num += num
+	}
+	fmt.Printf("num = %d\n", num)
+
+	fmt.Println("v3.0 (infinite)")
+	no := 1
+	for {
+		no += no
+		fmt.Println(no)
+		if no > 100 {
+			break // (or) continue
+		}
+	}
+	fmt.Printf("no = %d\n", no)
+
+	fmt.Println("using labels")
+
+OUTERLOOP:
+	for i := 1; i <= 9; i++ {
+		for j := 1; j <= 9; j++ {
+			fmt.Println(i, j)
+			if i == j {
+				fmt.Println("------------")
+				continue OUTERLOOP
+			}
+		}
+	}
 }
