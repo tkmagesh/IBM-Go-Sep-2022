@@ -1,0 +1,58 @@
+Magesh Kuppan
+
+Schedule:
+    Commence    : 9:30 AM
+    Tea Break   : 11:00 AM (20 mins)
+    Lunch Break : 1:00 PM (1 hour)
+    Tea Beak    : 3:30 PM (20 mins)
+    Wind up     : 5:30 PM 
+
+Methodology:
+    * no powerpoints
+    * 100% hands on driven
+
+About You:
+    - Name
+    - Primary Skillset
+    - Experience in Golang (if any)
+
+Repository:
+    https://github.com/tkmagesh/ibm-go-sep-2022
+
+Software Requirements:
+    1. Visual Studio Code (https://code.visualstudio.com)
+    2. Go Tools (https://go.dev/dl/)
+    3. Configure Visual Studio Code
+        Ctrl + Shift + P
+            Go: Install
+            Select all the checkboxes 
+            Hit Ok
+
+
+Why Go (2010) ?
+    1. Close to hardware
+    2. Simplicity
+        - Only 25 keywords
+        - No access modifiers (public, private, protected etc)
+        - No class construct (only structs)
+        - No inheritence (only composition)
+        - No exceptions (only errors)
+        - No reference types (everything is a value)
+        - No pointer arithmetic (unlike C & C++)
+        - No implicit type conversion
+    3. Concurrency (ability to have more than one execution path)
+        - Concurrency is a "language" feature (Goroutines)
+        - Scheduler is built in the application's compiled binary
+        - Language features :
+            go, chan (data type), <- (chan operator), range construct, select construct
+        - APIs
+            sync package
+            sync/atomic package
+
+Paradox of Choice (Barry Shwartz)
+
+Running a go program
+    go run <program.go>
+
+Creating a build
+    go build <program.go>
