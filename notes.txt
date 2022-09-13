@@ -81,3 +81,11 @@ Data Types
 
     byte (alias for uint8)
     rune (alias for int32) (unicode code point)
+
+Higher Order Functions
+    Functions are first class citizens (objects)
+    1. Functions can be assinged to variables
+    2. Functions can be passed as arguments to other functions
+    3. Functions can be returned as return values from other functions
+
+    
