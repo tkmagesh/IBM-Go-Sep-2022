@@ -89,3 +89,10 @@ Higher Order Functions
     3. Functions can be returned as return values from other functions
 
 Variadic functions
+
+Collection
+    Array
+        Fixed size collection of data of the same type
+        
+    Slice
+    Map
