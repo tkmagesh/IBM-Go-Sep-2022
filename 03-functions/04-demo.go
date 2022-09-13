@@ -14,6 +14,11 @@ func main() {
 	})
 
 	/*
+		add(100,200)
+		multiply(100,200)
+	*/
+
+	/*
 		logAdd(100, 200)
 		logMultiply(100, 200)
 	*/
