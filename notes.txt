@@ -88,4 +88,4 @@ Higher Order Functions
     2. Functions can be passed as arguments to other functions
     3. Functions can be returned as return values from other functions
 
-    
+Variadic functions
