@@ -1,3 +1,4 @@
+/* functions as values to variables */
 package main
 
 import "fmt"
@@ -22,17 +23,17 @@ func main() {
 	}
 	print(getGreetMsg("Suresh"))
 
-	var add ?
+	var add func(int, int) int
 	add = func(x, y int) (result int) {
 		result = x + y
 		return
 	}
-	fmt.Println(add(100,200))
+	fmt.Println(add(100, 200))
 
-	var divide ?
+	var divide func(int, int) (int, int)
 	divide = func(x, y int) (quotient, remainder int) {
 		quotient, remainder = x/y, x%y
 		return
 	}
-	fmt.Println(divide(100,7))
+	fmt.Println(divide(100, 7))
 }
