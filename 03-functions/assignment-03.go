@@ -50,7 +50,10 @@ func getUserChoice() int {
 	fmt.Println("4. Divide")
 	fmt.Println("5. Exit")
 	fmt.Println("Enter your choice:")
-	fmt.Scanln(&userChoice)
+	_, err := fmt.Scanln(&userChoice)
+	if err != nil {
+		fmt.Println(err)
+	}
 	return userChoice
 }
 
