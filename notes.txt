@@ -137,3 +137,6 @@ Modularity
 
         To localize the dependencies
             go mod vendor
+
+        Module command reference
+            https://go.dev/ref/mod
