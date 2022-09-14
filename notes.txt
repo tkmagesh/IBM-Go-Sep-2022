@@ -127,3 +127,13 @@ Modularity
 
         To create a binary in different name
             go build -o <binary_name> .
+
+        To install a 3rd party package
+            go get github.com/fatih/color
+                (downloaded to GOPATH/pkg/mod/.....)
+
+        To update the go.mod file based on the usage of the dependencies
+            go mod tidy
+
+        To localize the dependencies
+            go mod vendor
