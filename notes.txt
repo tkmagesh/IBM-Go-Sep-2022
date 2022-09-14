@@ -118,3 +118,12 @@ Modularity
 
         Creating a module
             go mod init <module_name>
+
+        To execute a module
+            go run .
+
+        To create a build
+            go build .
+
+        To create a binary in different name
+            go build -o <binary_name> .
