@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 
@@ -26,6 +29,9 @@ func divideClient(x, y int) (quotient, remainder int, err error) {
 
 //from a 3rd party library
 func divide(x, y int) (quotient, remainder int) {
+	if y == 0 {
+		panic(errors.New("divisor cannot be zero"))
+	}
 	quotient, remainder = x/y, x%y
 	fmt.Println("after calculation")
 	return

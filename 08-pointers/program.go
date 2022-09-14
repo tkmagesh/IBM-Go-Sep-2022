@@ -5,7 +5,10 @@ import "fmt"
 func main() {
 	var no int = 10
 	//noPtr := &no
-	var noPtr *int = &no
+	var noPtr *int
+	fmt.Println(noPtr)
+
+	noPtr = &no
 
 	//derefencing - accessing the value using the pointer
 	var x = *noPtr

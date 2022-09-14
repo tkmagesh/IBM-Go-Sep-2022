@@ -99,3 +99,22 @@ Collection
 
     Map
         Key-Value collection
+
+Modularity
+    Modules & Packages
+
+    Module
+        A group of code that you want to be versioned and distributed together
+        It is typically an application / library
+        Any folder that has the go.mod file
+        go.mod
+            module name
+                repository where the module is maintained
+                ex:
+                    github.com/tkmagesh/my-app
+                    
+            go version
+            references to other modules & packages
+
+        Creating a module
+            go mod init <module_name>
