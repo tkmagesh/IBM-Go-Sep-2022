@@ -144,3 +144,7 @@ Modularity
 Go Concurrency
     - NEVER assume the time taken for a goroutine to execute
     - NEVER assume the sequence of execution of goroutines
+
+    To detec race conditions
+        go run --race <program.go>
+        go build --race <program.go>
