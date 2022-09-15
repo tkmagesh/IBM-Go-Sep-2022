@@ -10,7 +10,7 @@ func main() {
 	fmt.Println("result = ", result)
 }
 
-func add(x, y int) chan int {
+func add(x, y int) <-chan int {
 	ch := make(chan int)
 	go func() {
 		result := x + y
