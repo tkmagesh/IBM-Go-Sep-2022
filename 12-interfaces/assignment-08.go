@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 type Product struct {
 	Id       int
@@ -39,6 +42,52 @@ func (products Products) String() string {
 	return result
 }
 
+/* sort.Interface interface implementation */
+func (products Products) Len() int {
+	return len(products)
+}
+
+func (products Products) Less(i, j int) bool {
+	return products[i].Id < products[j].Id
+}
+
+func (products Products) Swap(i, j int) {
+	products[i], products[j] = products[j], products[i]
+}
+
+/* sorting by name */
+type byName struct {
+	Products
+}
+
+func (products byName) Less(i, j int) bool {
+	return products.Products[i].Name < products.Products[j].Name
+}
+
+/* sorting by cost */
+type byCost struct {
+	Products
+}
+
+func (products byCost) Less(i, j int) bool {
+	return products.Products[i].Cost < products.Products[j].Cost
+}
+
+func (products Products) Sort(attrName string) {
+	switch attrName {
+	case "Id":
+		sort.Sort(products)
+	case "Name":
+		sort.Sort(byName{products})
+	case "Cost":
+		sort.Sort(byCost{products})
+	case "Units":
+		sort.Slice(products, func(i, j int) bool {
+			return products[i].Units < products[j].Units
+		})
+	}
+}
+
 func main() {
 	products := Products{
 		Product{105, "Pen", 5, 50, "Stationary"},
@@ -51,6 +100,25 @@ func main() {
 	}
 
 	fmt.Println("Initial List")
+	fmt.Println(products)
+
+	fmt.Println("Default sort")
+	//sort.Sort(products)
+	products.Sort("Id")
+	fmt.Println(products)
+
+	fmt.Println("sort by name")
+	//sort.Sort(byName{products})
+	products.Sort("Name")
+	fmt.Println(products)
+
+	fmt.Println("sort by cost")
+	//sort.Sort(byCost{products})
+	products.Sort("Cost")
+	fmt.Println(products)
+
+	fmt.Println("sort by units")
+	products.Sort("Units")
 	fmt.Println(products)
 
 }
