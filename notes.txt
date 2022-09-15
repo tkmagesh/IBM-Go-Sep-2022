@@ -148,3 +148,13 @@ Go Concurrency
     To detec race conditions
         go run --race <program.go>
         go build --race <program.go>
+
+    Channel
+        Creation
+            ch := make(chan int)
+
+        Sending data to the channel
+            ch <- 100
+
+        Receiving data from the channel
+            data := <- ch
