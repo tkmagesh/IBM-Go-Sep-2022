@@ -140,3 +140,7 @@ Modularity
 
         Module command reference
             https://go.dev/ref/mod
+
+Go Concurrency
+    - NEVER assume the time taken for a goroutine to execute
+    - NEVER assume the sequence of execution of goroutines
