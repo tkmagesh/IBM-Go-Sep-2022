@@ -158,3 +158,7 @@ Go Concurrency
 
         Receiving data from the channel
             data := <- ch
+
+        Behavior:
+            The "Receive" operation is ALWAYS a blocking operation
+            The "Send" operation is blocked UNTIL receive operation is initiated (conditions apply)
